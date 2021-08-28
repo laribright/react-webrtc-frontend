@@ -1,0 +1,1 @@
+export const JOIN_CHAT = 'JOIN_CHAT'

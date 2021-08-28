@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
 
-function App() {
+import Options from "./components/options/Options";
+import VideoPlayer from "./components/videoPlayer/VideoPlayer";
+import VideoNotification from "./components/videoNotification/VideoNotification";
+import "./app.css";
+
+const useStyles = makeStyles((theme) => ({
+  wrapper: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    width: "100%",
+  },
+}));
+
+const App = () => {
+  const classes = useStyles();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className={classes.wrapper}>
+        <VideoPlayer />
+        <Options>
+          <VideoNotification />
+        </Options>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
