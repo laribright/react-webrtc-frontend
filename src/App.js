@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Options from "./components/options/Options";
 import VideoPlayer from "./components/videoPlayer/VideoPlayer";
 import VideoNotification from "./components/videoNotification/VideoNotification";
-import "./app.css";
+import "./App.css";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
